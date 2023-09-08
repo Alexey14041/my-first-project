@@ -1,0 +1,58 @@
+@media (max-width: 1100px) {
+    @mixin flex() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-nav {
+        @include flex();
+        row-gap: 30px;
+        .nav-list {
+            @include flex();
+            row-gap: 15px;
+        }
+    }
+    .block-hero {
+        @include flex();
+        margin: 20px auto;
+        .block-title {
+            @include flex();
+            margin: 0;
+        }
+    }
+    .block-about {
+        margin: 40px auto;
+        .block {
+            @include flex();
+            row-gap: 20px;
+            .text {
+                font-size: 16px;
+                line-height: 2;
+                letter-spacing: 0.02em;
+            }
+        }
+    }
+    .block-parent {
+        @include flex();
+        row-gap: 60px;
+        .parent {
+            text-align: center;
+            border-radius: 6px;
+            .text-parent {
+                padding: 10px;
+            }
+        }
+    }
+    .block-footer {
+        @include flex();
+        row-gap: 15px;
+        .footer-list {
+            @include flex();
+            row-gap: 10px;
+        }
+    }
+    .list-img {
+        @include flex();
+        row-gap: 30px;
+    }
+}

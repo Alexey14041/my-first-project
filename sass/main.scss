@@ -1,0 +1,195 @@
+$color-title: #212121;
+$color-text: #757575;
+$color-active: #9407f1;
+$color-logo: #96fa12;
+$color-header: orange;
+$color-dark: #000;
+$color-footer: #e2e2e2;
+$color-button-activ: #08f7d7;
+$color-bgc: linear-gradient(105deg, rgb(228, 139, 255) 40%, rgb(151, 253, 253));
+@mixin cont() {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+@mixin flex() {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    color: $color-title;
+    background: $color-bgc;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: (16 / 14);
+
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        font-style: normal;
+    }
+    .container {
+        @include cont();
+    }
+
+    .header {
+        padding: 30px 20px;
+        background-color: $color-header;
+        .header-nav {
+            @include flex();
+            align-items: center;
+        }
+    }
+    .logo-link {
+        color: $color-active;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: (31 / 26);
+        letter-spacing: 0.03em;
+        &:hover,
+        :focus {
+            color: $color-logo;
+        }
+        .logo-link-text {
+            color: $color-logo;
+            &:hover,
+            :focus {
+                color: $color-active;
+            }
+        }
+    }
+    .nav-list {
+        display: flex;
+        column-gap: 100px;
+        .nav-link {
+            color: $color-dark;
+            font-size: 18px;
+            line-height: (20 / 18);
+            &:hover,
+            :focus {
+                color: $color-footer;
+            }
+        }
+        .nav-link-activ {
+            color: $color-button-activ;
+        }
+    }
+    .block-hero {
+        @include flex();
+        margin: 30px auto;
+        .photo {
+            border-radius: 6px;
+        }
+        .block-title {
+            display: flex;
+            flex-direction: column;
+            color: $color-active;
+            text-align: center;
+            padding: 50px;
+            margin-right: 100px;
+            .title-2 {
+                color: $color-logo;
+                margin: 50px 150px;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: (24 / 22);
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+    .title-1 {
+        color: $color-title;
+        margin: 50px 110px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: (36 / 30);
+        letter-spacing: 0.03em;
+    }
+    .title-2-1 {
+        margin: 30px;
+        color: $color-title;
+        text-align: center;
+    }
+    .block-about {
+        margin: 20px auto;
+        border-top: 2px solid $color-button-activ;
+
+        .block {
+            display: flex;
+            .text {
+                color: $color-title;
+                font-size: 20px;
+                line-height: (50 / 20);
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+    .block-parent {
+        display: flex;
+        column-gap: 100px;
+        justify-content: center;
+        .text-parent {
+            line-height: (24 / 14);
+        }
+    }
+    .title-3 {
+        color: $color-title;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 600;
+        margin: 20px;
+        text-align: center;
+        &:hover,
+        :focus {
+            color: $color-active;
+        }
+    }
+    .block-img {
+        width: 300px;
+    }
+    .block-footer {
+        background-color: $color-footer;
+        padding: 30px 100px;
+        .link-footer {
+            color: $color-title;
+            font-size: 16px;
+            line-height: (30 / 16);
+            &:hover,
+            :focus {
+                color: $color-active;
+            }
+            .icon {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+/* LIBRARY */
+
+.list-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    .title-3-1 {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 20px 0;
+        text-align: left;
+    }
+}
