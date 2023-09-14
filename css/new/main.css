@@ -31,6 +31,12 @@ body .header .header-nav {
     justify-content: space-between;
     align-items: center;
 }
+.cont-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
 body .logo-link {
     color: #9407f1;
     font-family: "Raleway", sans-serif;
@@ -48,6 +54,13 @@ body .logo-link .logo-link-text {
 body .logo-link .logo-link-text:hover, body .logo-link .logo-link-text :focus {
     color: #9407f1;
 }
+.btn-heart {
+    margin: 0 5px 0 30px;
+    border: none;
+    background-color: orange;
+    cursor: pointer;
+}
+
 body .nav-list {
     display: flex;
     column-gap: 100px;

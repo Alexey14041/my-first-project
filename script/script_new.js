@@ -68,3 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   addressElement.innerHTML = string;
 })
+
+// Button-Like
+
+const btn = document.querySelector('.btn-heart');
+let count = document.querySelector('.count');
+let i = 0;
+btn.addEventListener('click', () => {
+  localStorage.setItem('like', i);
+  let str = '';
+  if (localStorage.getItem('like') == 0) {
+    str = `<img src="./image/icon-heart-2.png" alt="heart-2">`;
+    localStorage.setItem('like', ++i);
+    btn.innerHTML = str;
+    count.innerHTML = localStorage.getItem('like');
+  } else if (localStorage.getItem('like') == 1) {
+    str = `<img src="./image/icon-heart-1.png" alt="heart-1"></img>`;
+    localStorage.setItem('like', --i);
+    btn.innerHTML = str;
+    count.innerHTML = localStorage.getItem('like');
+  }
+})
